@@ -1,4 +1,2 @@
-*
-!*.c
-!libndav.h
-!Makefile
+objects/
+*.a
