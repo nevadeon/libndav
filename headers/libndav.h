@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libndav.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nevadeon <nevadeon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:24:54 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/13 12:18:00 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/04/20 05:05:38 by nevadeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	*ft_memmove(void *dest, const void *src, int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
-size_t	ft_printf(const char *format, ...);
+size_t	ft_printf(int fd, const char *format, ...);
 size_t	ft_putchar_fd(char c, int fd);
 size_t	ft_putstr_fd(const char *s, int fd);
 size_t	ft_putptr_fd(void *p, int fd);
