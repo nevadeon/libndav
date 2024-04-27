@@ -6,7 +6,7 @@
 /*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:11:28 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 19:21:12 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/04/13 12:47:20 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,16 @@ static size_t	_printarg(char c, va_list args)
 	else if (c == 'p')
 		return (ft_putptr_fd(va_arg(args, void *), 1));
 	else if (c == 'd' || c == 'i')
-		return (ft_putnbase_fd((long) va_arg(args, int), DEC, 1));
+		return (ft_putlbase_fd((long) va_arg(args, int), DEC, 1));
 	else if (c == 'u')
-		return (ft_putnbase_fd((long) va_arg(args, unsigned int), DEC, 1));
+		return (ft_putulbase_fd((size_t) va_arg(args, t_uint), DEC, 1));
 	else if (c == 'x')
-		return (ft_putnbase_fd((long) va_arg(args, unsigned int), HEXA_LOW, 1));
+		return (ft_putulbase_fd((size_t) va_arg(args, t_uint), HEXA_LOW, 1));
 	else if (c == 'X')
-		return (ft_putnbase_fd((long) va_arg(args, unsigned int), HEXA_UPP, 1));
+		return (ft_putulbase_fd((size_t) va_arg(args, t_uint), HEXA_UPP, 1));
 	else if (c == '%')
 		return (ft_putchar_fd('%', 1));
-	ft_putstr_fd("%c", 1);
-	return (2);
+	return (ft_printf("%%%c", c));
 }
 
 size_t	ft_printf(const char *format, ...)

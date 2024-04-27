@@ -6,7 +6,7 @@
 /*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:24:54 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 19:27:35 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/04/13 12:18:00 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 255
 # endif
+
+typedef unsigned int t_uint;
 
 typedef struct s_list
 {
@@ -76,7 +78,7 @@ size_t	ft_printf(const char *format, ...);
 size_t	ft_putchar_fd(char c, int fd);
 size_t	ft_putstr_fd(const char *s, int fd);
 size_t	ft_putptr_fd(void *p, int fd);
-size_t	ft_putnbase_fd(long n, char *base, int fd);
+size_t	ft_putlbase_fd(long n, char *base, int fd);
 size_t	ft_putulbase_fd(size_t n, char *base, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);

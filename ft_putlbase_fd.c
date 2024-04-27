@@ -1,45 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbase_fd.c                                   :+:      :+:    :+:   */
+/*   ft_putlbase_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:01:57 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 19:29:21 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/04/13 12:48:11 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-_Pragma("clang diagnostic push");
-_Pragma("clang diagnostic ignored \"-Wcomment\"");
-/* *\
-/
-
-static size_t	_recursive(long l, char *base, int base_len, size_t nbp, int fd)
-{
-	if (l >= base_len)
-		nbp = _recursive(l / base_len, base, base_len, nbp, fd);
-	ft_putchar_fd(base[l % base_len], fd);
-	return (nbp + 1);
-}
-/**/
-
-_Pragma("clang diagnostic pop");
-
-size_t	ft_putnbase_fd(long n, char *base, int fd)
+static size_t	_recursive(size_t l, char *base, size_t base_len, int fd)
 {
 	size_t	nb_printed;
-	size_t	base_len;
 
 	nb_printed = 0;
+	if (l >= base_len)
+		nb_printed = _recursive(l / base_len, base, base_len, fd);
+	ft_putchar_fd(base[l % base_len], fd);
+	return (nb_printed + 1);
+}
+
+size_t	ft_putlbase_fd(long l, char *base, int fd)
+{
+	size_t	base_len;
+
 	base_len = ft_strlen(base);
-	if (n < 0)
+	if (l < 0)
 	{
 		ft_putchar_fd('-', fd);
-		nb_printed++;
-		n = -n;
+		l *= -1;
+		return (_recursive((size_t) l, base, base_len, fd) + 1);
 	}
-	return (_recursive(n, base, base_len, nb_printed, fd));
+	return (_recursive((size_t) l, base, base_len, fd));
 }
