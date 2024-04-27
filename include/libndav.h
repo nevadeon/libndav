@@ -6,7 +6,7 @@
 /*   By: nevadeon <nevadeon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:24:54 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/20 05:05:38 by nevadeon         ###   ########.fr       */
+/*   Updated: 2024/04/22 23:25:20 by nevadeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <stdbool.h>
 
 # define DEC "0123456789"
 # define HEXA_LOW "0123456789abcdef"
@@ -62,9 +63,9 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strlcpy(char *dest, const char *src, size_t d_size);
 size_t	ft_strlcat(char *dest, const char *src, size_t d_size);
 
-size_t	ft_strclen(const char *str, char c);
-char	*ft_strcdup(const char *str, char c);
-void	ft_strccat(char *dest, const char *src, char c);
+size_t	ft_strclen(const char *str, char c, bool include);
+char	*ft_strcdup(const char *str, char c, bool include);
+void	ft_strccat(char *dest, const char *src, char c, bool include);
 
 void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_bzero(void *s, int n);
