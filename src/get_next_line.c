@@ -6,7 +6,7 @@
 /*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 17:23:03 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 17:32:14 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/04/15 17:02:38 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,3 @@ char	*get_next_line(int fd)
 	ft_strcpy(buffer, buffer + ft_strclen(buffer, '\n'));
 	return (line);
 }
-
-// #include <fcntl.h>
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	int fd = open("Makefile", O_RDONLY);
-// 	char *line = get_next_line(fd);
-// 	printf("%s",line);
-// 	free(line);
-// 	return(0);
-// }

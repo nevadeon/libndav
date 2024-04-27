@@ -1,73 +1,77 @@
 NAME = libndav.a
 
 CC = cc
-FLAGS = -Wall -Werror -Wextra -I headers
+FLAGS = -Wall -Werror -Wextra -I include
 
-SRCS = lists/ft_lstadd_front.c\
-lists/ft_lstadd_back.c\
-lists/ft_lstclear.c\
-lists/ft_lstlast.c\
-lists/ft_lstmap.c\
-lists/ft_lstdelone.c\
-lists/ft_lstnew.c\
-lists/ft_lstiter.c\
-lists/ft_lstsize.c\
-ft_itoa.c\
-get_next_line.c\
-strings/ft_strclen.c\
-strings/ft_strjoin.c\
-strings/ft_striteri.c\
-strings/ft_strcdup.c\
-strings/ft_strdup.c\
-strings/ft_strlen.c\
-strings/ft_strlcat.c\
-strings/ft_split.c\
-strings/ft_strcpy.c\
-strings/ft_strtrim.c\
-strings/ft_strcat.c\
-strings/ft_strmapi.c\
-strings/ft_strlcpy.c\
-strings/ft_strnstr.c\
-strings/ft_strrchr.c\
-strings/ft_strncmp.c\
-strings/ft_strchr.c\
-strings/ft_strccat.c\
-strings/ft_substr.c\
-ft_atoi.c\
-ascii/ft_isalnum.c\
-ascii/ft_isascii.c\
-ascii/ft_isprint.c\
-ascii/ft_tolower.c\
-ascii/ft_isdigit.c\
-ascii/ft_toupper.c\
-ascii/ft_isalpha.c\
-printf/ft_putnbr_fd.c\
-printf/ft_putptr_fd.c\
-printf/ft_putendl_fd.c\
-printf/ft_printf.c\
-printf/ft_putulbase_fd.c\
-printf/ft_putchar_fd.c\
-printf/ft_putlbase_fd.c\
-printf/ft_putstr_fd.c\
-memory/ft_memchr.c\
-memory/ft_memcmp.c\
-memory/ft_memcpy.c\
-memory/ft_memset.c\
-memory/ft_bzero.c\
-memory/ft_memmove.c\
-memory/ft_calloc.c\
+FILES = lists/ft_lstadd_front \
+lists/ft_lstadd_back \
+lists/ft_lstclear \
+lists/ft_lstlast \
+lists/ft_lstmap \
+lists/ft_lstdelone \
+lists/ft_lstnew \
+lists/ft_lstiter \
+lists/ft_lstsize \
+ft_itoa \
+get_next_line \
+strings/ft_strclen \
+strings/ft_strjoin \
+strings/ft_striteri \
+strings/ft_strcdup \
+strings/ft_strdup \
+strings/ft_strlen \
+strings/ft_strlcat \
+strings/ft_split \
+strings/ft_strcpy \
+strings/ft_strtrim \
+strings/ft_strcat \
+strings/ft_strmapi \
+strings/ft_strlcpy \
+strings/ft_strnstr \
+strings/ft_strrchr \
+strings/ft_strncmp \
+strings/ft_strchr \
+strings/ft_strccat \
+strings/ft_substr \
+ft_atoi \
+ascii/ft_isalnum \
+ascii/ft_isascii \
+ascii/ft_isprint \
+ascii/ft_tolower \
+ascii/ft_isdigit \
+ascii/ft_toupper \
+ascii/ft_isalpha \
+printf/ft_putnbr_fd \
+printf/ft_putptr_fd \
+printf/ft_putendl_fd \
+printf/ft_printf \
+printf/ft_putulbase_fd \
+printf/ft_putchar_fd \
+printf/ft_putlbase_fd \
+printf/ft_putstr_fd \
+memory/ft_memchr \
+memory/ft_memcmp \
+memory/ft_memcpy \
+memory/ft_memset \
+memory/ft_bzero \
+memory/ft_memmove \
+memory/ft_calloc \
 
-OBJ_DIR = objects
-OBJ = $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
+SRC_DIR = src
+OBJ_DIR = obj
+
+SRC = $(addprefix $(SRC_DIR)/, $(addsuffix .c, $(FILES)))
+OBJ = $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(FILES)))
 
 all: $(NAME)
  
 $(NAME): $(OBJ)
-	ar rcs $@ $^
+	@ar rcs $@ $(OBJ)
+	@echo "\033[32m✔ Libndav created.\033[37m"
 
-$(OBJ_DIR)/%.o: %.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(dir $@)
-	$(CC) $(FLAGS) -o $@ -c $<
+	@$(CC) $(FLAGS) -o $@ -c $<
 
 clean:
 	rm -rf $(OBJ_DIR)
@@ -77,7 +81,4 @@ fclean: clean
 
 re: fclean all
 
-main:
-	$(CC) main/main.c $(NAME)
-
-.PHONY: all clean fclean re main
+.PHONY: all clean fclean re
