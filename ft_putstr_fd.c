@@ -6,17 +6,19 @@
 /*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:24:32 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 17:21:20 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/04/12 19:17:21 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-void	ft_putstr_fd(char *s, int fd)
+size_t	ft_putstr_fd(const char *s, int fd)
 {
-	while (*s)
-	{
-		write(fd, s, sizeof(char));
-		s++;
-	}
+	size_t	len;
+
+	if (s == NULL)
+		return (ft_putstr_fd("(null)", 1));
+	len = ft_strlen(s);
+	write(fd, s, len);
+	return (len);
 }

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putptr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/01 12:43:15 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 18:33:33 by ndavenne         ###   ########.fr       */
+/*   Created: 2024/04/12 18:25:12 by ndavenne          #+#    #+#             */
+/*   Updated: 2024/04/12 19:30:50 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-void	ft_putendl_fd(char *s, int fd)
+size_t	ft_putptr_fd(void *p, int fd)
 {
-	size_t	len;
-
-	len = ft_strlen(s);
-	write(fd, s, len);
-	ft_putchar_fd('\n', fd);
+	if (p == NULL)
+		return (ft_putstr_fd("(nil)", fd));
+	ft_putstr_fd("0x", fd);
+	return (ft_putulbase_fd((size_t) p, HEXA_LOW, fd) + 2);
 }

@@ -6,7 +6,7 @@
 /*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 18:16:51 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 17:21:20 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/04/12 17:57:49 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*s_ptr;
+	unsigned char	*ptr;
 
-	s_ptr = (unsigned char *)s;
+	ptr = (unsigned char *) s;
 	while (n--)
 	{
-		if (*s_ptr == (unsigned char)c)
-			return (s_ptr);
-		s_ptr++;
+		if (*ptr == (unsigned char) c)
+			return (ptr);
+		ptr++;
 	}
 	return (NULL);
 }

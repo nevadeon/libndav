@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libndav.h                                            :+:      :+:    :+:   */
+/*   libndav.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 09:36:39 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 16:14:07 by ndavenne         ###   ########.fr       */
+/*   Created: 2024/04/12 19:24:54 by ndavenne          #+#    #+#             */
+/*   Updated: 2024/04/12 19:27:35 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 
+# define DEC "0123456789"
+# define HEXA_LOW "0123456789abcdef"
+# define HEXA_UPP "0123456789ABCDEF"
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 255
 # endif
@@ -39,8 +43,9 @@ int		ft_atoi(const char *s);
 char	*ft_itoa(int n);
 
 size_t	ft_strlen(const char *s);
+void	ft_strcpy(char *dest, const char *src);
+void	ft_strcat(char *dest, const char *src);
 char	*ft_strdup(const char *s);
-void	ft_strcpy(char *dest, char *src);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	**ft_split(char const *s, char c);
@@ -67,8 +72,12 @@ void	*ft_memmove(void *dest, const void *src, int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
+size_t	ft_printf(const char *format, ...);
+size_t	ft_putchar_fd(char c, int fd);
+size_t	ft_putstr_fd(const char *s, int fd);
+size_t	ft_putptr_fd(void *p, int fd);
+size_t	ft_putnbase_fd(long n, char *base, int fd);
+size_t	ft_putulbase_fd(size_t n, char *base, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 

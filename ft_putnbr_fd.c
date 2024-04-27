@@ -6,16 +6,16 @@
 /*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:53:16 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 17:21:20 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/04/12 19:29:57 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-static void	_recursivite(long l, int fd)
+static void	_recursive(long l, int fd)
 {
 	if (l >= 10)
-		_recursivite(l / 10, fd);
+		_recursive(l / 10, fd);
 	ft_putchar_fd(l % 10 + '0', fd);
 }
 
@@ -29,5 +29,5 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		l = -l;
 	}
-	_recursivite(l, fd);
+	_recursive(l, fd);
 }
