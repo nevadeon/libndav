@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nevadeon <nevadeon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nevadeon <github@noedavenne.aleeas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:10:40 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/22 23:16:50 by nevadeon         ###   ########.fr       */
+/*   Updated: 2024/05/10 00:35:12 by nevadeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-char	*ft_strcdup(const char *str, char c, bool include)
+char	*ft_strcdup(const char *str, char c, bool include_char)
 {
 	char	*copy;
 	size_t	len;
 	size_t	i;
 
-	len = ft_strclen(str, c, include);
+	len = ft_strclen(str, c, include_char);
 	copy = (char *) malloc((len + 1) * sizeof(char));
 	if (copy == NULL)
 		return (NULL);
