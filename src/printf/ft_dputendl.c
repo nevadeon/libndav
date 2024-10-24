@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_dputendl.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/01 12:53:16 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 19:29:57 by ndavenne         ###   ########.fr       */
+/*   Created: 2024/03/01 12:43:15 by ndavenne          #+#    #+#             */
+/*   Updated: 2024/10/24 19:57:45 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-static void	_recursive(long l, int fd)
+void	ft_dputendl(int fd, char *s)
 {
-	if (l >= 10)
-		_recursive(l / 10, fd);
-	ft_putchar_fd(l % 10 + '0', fd);
-}
+	size_t	len;
 
-void	ft_putnbr_fd(int n, int fd)
-{
-	long	l;
-
-	l = (long) n;
-	if (l < 0)
-	{
-		ft_putchar_fd('-', fd);
-		l = -l;
-	}
-	_recursive(l, fd);
+	len = ft_strlen(s);
+	write(fd, s, len);
+	ft_dputchar(fd, '\n');
 }

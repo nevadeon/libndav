@@ -41,14 +41,14 @@ ascii/ft_tolower \
 ascii/ft_isdigit \
 ascii/ft_toupper \
 ascii/ft_isalpha \
-printf/ft_putnbr_fd \
-printf/ft_putptr_fd \
-printf/ft_putendl_fd \
-printf/ft_printf \
-printf/ft_putulbase_fd \
-printf/ft_putchar_fd \
-printf/ft_putlbase_fd \
-printf/ft_putstr_fd \
+printf/ft_dputnbr \
+printf/ft_dputptr \
+printf/ft_dputendl \
+printf/ft_dprintf \
+printf/ft_dputulbase \
+printf/ft_dputchar \
+printf/ft_dputlbase \
+printf/ft_dputstr \
 memory/ft_memchr \
 memory/ft_memcmp \
 memory/ft_memcpy \
@@ -64,7 +64,7 @@ SRC = $(addprefix $(SRC_DIR)/, $(addsuffix .c, $(FILES)))
 OBJ = $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(FILES)))
 
 all: $(NAME)
- 
+
 $(NAME): $(OBJ)
 	@ar rcs $@ $(OBJ)
 	@echo "\033[32m✔ Libndav created.\033[37m"

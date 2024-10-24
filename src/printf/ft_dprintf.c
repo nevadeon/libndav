@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_dprintf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nevadeon <github@noedavenne.aleeas.com>    +#+  +:+       +#+        */
+/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:11:28 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/05/10 00:29:54 by nevadeon         ###   ########.fr       */
+/*   Updated: 2024/10/24 20:04:34 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-static size_t	_printarg(char c, va_list args, int fd)
+static size_t	_dprintarg(int fd, char c, va_list args)
 {
 	if (c == 'c')
-		return (ft_putchar_fd((unsigned char) va_arg(args, int), fd));
+		return (ft_dputchar(fd, (unsigned char) va_arg(args, int)));
 	else if (c == 's')
-		return (ft_putstr_fd(va_arg(args, char *), fd));
+		return (ft_dputstr(fd, va_arg(args, char *)));
 	else if (c == 'p')
-		return (ft_putptr_fd(va_arg(args, void *), fd));
+		return (ft_dputptr(fd, va_arg(args, void *)));
 	else if (c == 'd' || c == 'i')
-		return (ft_putlbase_fd((long) va_arg(args, int), DEC, fd));
+		return (ft_dputlbase(fd, (long) va_arg(args, int), DEC));
 	else if (c == 'u')
-		return (ft_putulbase_fd((size_t) va_arg(args, uint32_t), DEC, fd));
+		return (ft_dputulbase(fd, (size_t) va_arg(args, uint32_t), DEC));
 	else if (c == 'x')
-		return (ft_putulbase_fd((size_t) va_arg(args, uint32_t), HEXA_LOW, fd));
+		return (ft_dputulbase(fd, (size_t) va_arg(args, uint32_t), HEXA_LOW));
 	else if (c == 'X')
-		return (ft_putulbase_fd((size_t) va_arg(args, uint32_t), HEXA_UPP, fd));
+		return (ft_dputulbase(fd, (size_t) va_arg(args, uint32_t), HEXA_UPP));
 	else if (c == '%')
-		return (ft_putchar_fd('%', fd));
-	return (ft_printf(fd, "%%%c", c));
+		return (ft_dputchar(fd, '%'));
+	return (0);
 }
 
-size_t	ft_printf(int fd, const char *format, ...)
+size_t	ft_dprintf(int fd, const char *format, ...)
 {
 	va_list	args;
 	size_t	nb_printed;
@@ -43,9 +43,9 @@ size_t	ft_printf(int fd, const char *format, ...)
 	while (*format != '\0')
 	{
 		if (*format == '%')
-			nb_printed += _printarg(*(++format), args, fd);
+			nb_printed += _dprintarg(fd, *(++format), args);
 		else
-			nb_printed += ft_putchar_fd(*format, fd);
+			nb_printed += ft_dputchar(fd, *format);
 		format++;
 	}
 	va_end(args);

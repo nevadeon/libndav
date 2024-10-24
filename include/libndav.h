@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libndav.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nevadeon <github@noedavenne.aleeas.com>    +#+  +:+       +#+        */
+/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:24:54 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/05/10 00:34:49 by nevadeon         ###   ########.fr       */
+/*   Updated: 2024/10/24 19:35:53 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,14 +74,14 @@ void	*ft_memmove(void *dest, const void *src, int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
-size_t	ft_printf(int fd, const char *format, ...);
-size_t	ft_putchar_fd(char c, int fd);
-size_t	ft_putstr_fd(const char *s, int fd);
-size_t	ft_putptr_fd(void *p, int fd);
-size_t	ft_putlbase_fd(long n, char *base, int fd);
-size_t	ft_putulbase_fd(size_t n, char *base, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+size_t	ft_dprintf(int fd, const char *format, ...);
+size_t	ft_dputchar(int fd, char c);
+size_t	ft_dputstr(int fd, const char *s);
+size_t	ft_dputptr(int fd, void *p);
+size_t	ft_dputlbase(int fd, long n, char *base);
+size_t	ft_dputulbase(int fd, size_t n, char *base);
+void	ft_dputendl(int fd, char *s);
+void	ft_dputnbr(int fd, int n);
 
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
