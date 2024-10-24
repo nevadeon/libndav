@@ -6,13 +6,13 @@
 /*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:02:52 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/24 19:48:05 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/24 20:10:22 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-static size_t	_recursive(int fd, size_t ul, char *base, size_t base_len)
+static size_t	_recursive(int fd, t_ulong ul, char *base, size_t base_len)
 {
 	size_t	nb_printed;
 
@@ -23,7 +23,7 @@ static size_t	_recursive(int fd, size_t ul, char *base, size_t base_len)
 	return (nb_printed + 1);
 }
 
-size_t	ft_dputulbase(int fd, size_t ul, char *base)
+size_t	ft_dputulbase(int fd, t_ulong ul, char *base)
 {
 	size_t	base_len;
 

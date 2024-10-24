@@ -6,7 +6,7 @@
 /*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:24:54 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/24 19:35:53 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/24 20:11:04 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ size_t	ft_dputchar(int fd, char c);
 size_t	ft_dputstr(int fd, const char *s);
 size_t	ft_dputptr(int fd, void *p);
 size_t	ft_dputlbase(int fd, long n, char *base);
-size_t	ft_dputulbase(int fd, size_t n, char *base);
+size_t	ft_dputulbase(int fd, t_ulong ul, char *base);
 void	ft_dputendl(int fd, char *s);
 void	ft_dputnbr(int fd, int n);
 

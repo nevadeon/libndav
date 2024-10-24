@@ -6,7 +6,7 @@
 /*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:11:28 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/24 20:04:34 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/24 20:13:20 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ static size_t	_dprintarg(int fd, char c, va_list args)
 	else if (c == 'd' || c == 'i')
 		return (ft_dputlbase(fd, (long) va_arg(args, int), DEC));
 	else if (c == 'u')
-		return (ft_dputulbase(fd, (size_t) va_arg(args, uint32_t), DEC));
+		return (ft_dputulbase(fd, (t_ulong) va_arg(args, t_uint), DEC));
 	else if (c == 'x')
-		return (ft_dputulbase(fd, (size_t) va_arg(args, uint32_t), HEXA_LOW));
+		return (ft_dputulbase(fd, (t_ulong) va_arg(args, t_uint), HEXA_LOW));
 	else if (c == 'X')
-		return (ft_dputulbase(fd, (size_t) va_arg(args, uint32_t), HEXA_UPP));
+		return (ft_dputulbase(fd, (t_ulong) va_arg(args, t_uint), HEXA_UPP));
 	else if (c == '%')
 		return (ft_dputchar(fd, '%'));
 	return (0);
