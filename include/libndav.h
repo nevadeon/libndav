@@ -26,6 +26,10 @@
 #  define BUFFER_SIZE 255
 # endif
 
+typedef unsigned int t_uint;
+typedef unsigned long t_ulong;
+typedef unsigned char t_byte;
+
 typedef struct s_list
 {
 	void			*content;
