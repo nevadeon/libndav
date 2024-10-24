@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 18:16:51 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 17:57:49 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/24 20:19:23 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*ptr;
+	t_byte	*ptr;
 
-	ptr = (unsigned char *) s;
+	ptr = (t_byte *) s;
 	while (n--)
 	{
-		if (*ptr == (unsigned char) c)
+		if (*ptr == (t_byte) c)
 			return (ptr);
 		ptr++;
 	}

@@ -3,18 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 09:45:26 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 15:24:53 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/24 20:18:42 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libndav.h"
+
 void	ft_bzero(void *s, int n)
 {
-	char	*ptr;
+	t_byte	*ptr;
 
-	ptr = (char *)s;
+	ptr = (t_byte *)s;
 	while (n--)
-		*ptr++ = (char) '\0';
+		*ptr++ = (t_byte) '\0';
 }
