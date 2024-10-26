@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 15:41:09 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 17:21:20 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:26:16 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	ptr = (void *) malloc(nmemb * size);
+	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);
 	ft_bzero(ptr, nmemb * size);

@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 15:59:33 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/24 20:21:14 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:33:11 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-void	*ft_memset(void *s, int c, int n)
+void	*ft_memset(void *s, t_byte b, int n)
 {
 	t_byte	*ptr;
 
 	ptr = (t_byte *)s;
 	while (n--)
-		*ptr++ = (t_byte)c;
+		*ptr++ = b;
 	return (s);
 }

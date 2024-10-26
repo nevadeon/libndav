@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 18:32:18 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/24 20:19:27 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:30:40 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

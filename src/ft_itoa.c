@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 16:41:45 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 17:21:20 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:55:27 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,3 @@ char	*ft_itoa(int n)
 	}
 	return (output);
 }
-
-// int	main(void)
-// {
-// 	printf("%s\n", ft_itoa(-0));
-// 	printf("%s\n", ft_itoa(153));
-// 	printf("%s\n", ft_itoa(-153));
-// 	printf("%s\n", ft_itoa(2147483647));
-// 	printf("%s\n", ft_itoa(-2147483648));
-// }

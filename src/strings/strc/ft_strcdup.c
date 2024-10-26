@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nevadeon <github@noedavenne.aleeas.com>    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:10:40 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/05/10 00:35:12 by nevadeon         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:45:21 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

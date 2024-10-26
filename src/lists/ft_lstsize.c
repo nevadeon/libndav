@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 17:47:48 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 17:21:20 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:24:54 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-int	ft_lstsize(t_list *lst)
+size_t	ft_lstsize(t_list *lst)
 {
-	int	size;
+	size_t	size;
 
 	size = 0;
 	while (lst != NULL)

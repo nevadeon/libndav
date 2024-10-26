@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strccat.c                                       :+:      :+:    :+:   */
+/*   ft_block_alloc.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nevadeon <github@noedavenne.aleeas.com>    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 16:08:51 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/05/10 00:34:49 by nevadeon         ###   ########.fr       */
+/*   Created: 2024/10/26 14:55:49 by ndavenne          #+#    #+#             */
+/*   Updated: 2024/10/27 00:25:50 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-void	ft_strccat(char *dest, const char *src, char c, bool include_char)
+void	*ft_block_alloc(size_t size)
 {
-	while (*dest)
-		dest++;
-	while (*src && *src != c)
-		*dest++ = *src++;
-	if (include_char == true && *src == c)
-		*dest++ = *src++;
-	*dest = '\0';
+	static t_byte	ptr[ARENA_BLOCK_SIZE] = {0};
+	static size_t	pos = 0;
+
+	if (pos + size > ARENA_BLOCK_SIZE)
+		return (NULL);
+	pos += size;
+	return (ptr + pos - size);
 }

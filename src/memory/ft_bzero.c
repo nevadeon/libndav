@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 09:45:26 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/24 20:18:42 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:35:31 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-void	ft_bzero(void *s, int n)
+void	ft_bzero(void *s, size_t n)
 {
 	t_byte	*ptr;
 

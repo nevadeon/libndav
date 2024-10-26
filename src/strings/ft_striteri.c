@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 11:49:11 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/04/12 15:29:35 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 01:01:08 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

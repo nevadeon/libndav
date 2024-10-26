@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dputulbase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:02:52 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/24 20:10:22 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:41:03 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

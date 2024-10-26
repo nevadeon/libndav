@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 10:45:26 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/24 20:21:36 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:34:37 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-void	*ft_memcpy(void *dest, const void *src, int n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	const t_byte	*s;
 	t_byte			*d;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libndav.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:24:54 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/24 20:11:04 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:48:27 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,16 @@
 # include <stdbool.h>
 # include <stdint.h>
 
-# define DEC "0123456789"
-# define HEXA_LOW "0123456789abcdef"
-# define HEXA_UPP "0123456789ABCDEF"
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 255
-# endif
-
-typedef unsigned int t_uint;
-typedef unsigned long t_ulong;
-typedef unsigned char t_byte;
-
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+typedef unsigned char	t_byte;
+typedef unsigned char	t_uchar;
+typedef unsigned int	t_uint;
+typedef unsigned long	t_ulong;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -43,6 +37,10 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+
+# ifndef GNL_BUFFER_SIZE
+#  define GNL_BUFFER_SIZE 4096
+# endif
 
 char	*get_next_line(int fd);
 int		ft_atoi(const char *s);
@@ -70,13 +68,23 @@ size_t	ft_strclen(const char *str, char c, bool include_char);
 char	*ft_strcdup(const char *str, char c, bool include_char);
 void	ft_strccat(char *dest, const char *src, char c, bool include_char);
 
+# ifndef ARENA_BLOCK_SIZE
+#  define ARENA_BLOCK_SIZE 65536
+# endif
+
+void	*ft_arena_alloc(size_t size);
+void	*ft_block_alloc(size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
-void	ft_bzero(void *s, int n);
-void	*ft_memset(void *s, int c, int n);
-void	*ft_memcpy(void *dest, const void *src, int n);
-void	*ft_memmove(void *dest, const void *src, int n);
-void	*ft_memchr(const void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
+void	*ft_memset(void *s, t_byte b, int n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+void	*ft_memchr(const void *s, t_byte b, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+# define DEC "0123456789"
+# define HEXA_LOW "0123456789abcdef"
+# define HEXA_UPP "0123456789ABCDEF"
 
 size_t	ft_dprintf(int fd, const char *format, ...);
 size_t	ft_dputchar(int fd, char c);
@@ -89,9 +97,9 @@ void	ft_dputnbr(int fd, int n);
 
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
-int		ft_lstsize(t_list *lst);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstadd_back(t_list **lst, t_list *new);
+size_t	ft_lstsize(t_list *lst);
+void	ft_lstadd_front(t_list **lst, t_list *new_node);
+void	ft_lstadd_back(t_list **lst, t_list *new_node);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
