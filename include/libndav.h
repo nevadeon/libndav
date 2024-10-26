@@ -6,7 +6,7 @@
 /*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:24:54 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/27 00:48:27 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 01:13:42 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-# include <stdbool.h>
-# include <stdint.h>
+# include <stdbool.h> //bool type
+# include <stdint.h> //integer types with fixed width
 
 typedef struct s_list
 {
@@ -73,7 +73,6 @@ void	ft_strccat(char *dest, const char *src, char c, bool include_char);
 # endif
 
 void	*ft_arena_alloc(size_t size);
-void	*ft_block_alloc(size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *s, t_byte b, int n);
