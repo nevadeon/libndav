@@ -6,7 +6,7 @@
 /*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 16:41:45 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/27 00:55:27 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 11:23:48 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_itoa(int n)
 		n_long /= 10;
 		len++;
 	}
-	output = (char *) malloc(sizeof(char) * (len + 1));
+	output = malloc(sizeof(char) * (len + 1));
 	if (output == NULL)
 		return (NULL);
 	output[len--] = '\0';
