@@ -6,7 +6,7 @@
 /*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:24:54 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/27 11:07:15 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/10/27 18:49:59 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-# ifndef ARENA_BLOCK_SIZE
-#  define ARENA_BLOCK_SIZE 65536
-# endif
-
-void	*ft_arena_alloc(size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *s, t_byte b, int n);
@@ -103,5 +98,25 @@ void	ft_dputnbr(int fd, int n);
 # endif
 
 char	*get_next_line(int fd);
+
+# ifndef ARENA_BLOCK_SIZE
+#  define ARENA_BLOCK_SIZE 65536
+# endif
+
+/**
+ * @brief This function has the same usage than malloc but doesn't handle memory
+ * the same way. In an arena allocation, bytes are stored in a list of blocks of
+ * continuous memory. If the end of one block is reached, a new one is created
+ * and added to the list. There are two benefits from this approach. The first
+ * one is performance optimisation due to less malloc calls and memory
+ * continuity. The second one is practicity, the user doesn't need to worry
+ * about allocated memory, only one call to the ft_free_arena at the end
+ * of the program frees all used memory at once, no leaks are possible !
+ * 
+ * @param size The number of bytes that need to be allocated
+ * @return A pointer to the allocated memory or NULL in case of error
+ */
+void	*ft_arena_alloc(size_t size);
+void	ft_free_arena(void);
 
 #endif
