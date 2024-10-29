@@ -74,12 +74,12 @@ test:
 # ============================================================================ #
 
 msg_comp:
-	@echo -e "$(YELLOW)🔧 Compiling library...\n$(RESET)"
+	@echo -e "$(YELLOW)🔧 Compiling libndav... [$(CFLAGS)]$(RESET)"
 
 msg_clean:
-	@echo -e "$(RED)🗑️ Removing lib object files...$(RESET)"
+	@echo -e "$(YELLOW)🗑️ Removing lib object files...$(RESET)"
 
 msg_fclean:
-	@echo -e "$(RED)🗑️ Removing libndav...$(RESET)"
+	@echo -e "$(YELLOW)🗑️ Removing libndav...$(RESET)"
 
 .PHONY: all clean fclean re test msg_comp msg_clean msg_fclean
