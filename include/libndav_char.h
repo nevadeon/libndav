@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   libndav_char.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/01 17:47:48 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/12/18 19:48:20 by ndavenne         ###   ########.fr       */
+/*   Created: 2024/12/18 21:02:58 by ndavenne          #+#    #+#             */
+/*   Updated: 2024/12/18 21:03:06 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libndav.h"
+#ifndef LIBNDAV_CHAR_H
+# define LIBNDAV_CHAR_H
 
-size_t	ft_lstsize(t_list *list)
-{
-	size_t	size;
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+int		ft_atoi(const char *s);
+char	*ft_itoa(int n);
 
-	size = 0;
-	while (list != NULL)
-	{
-		list = list->next;
-		size++;
-	}
-	return (size);
-}
+#endif

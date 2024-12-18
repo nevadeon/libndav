@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
+/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 11:45:23 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/27 00:19:45 by ndavenne         ###   ########.fr       */
+/*   Updated: 2024/12/18 21:48:06 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libndav.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_pointer_list *list, t_delete_function delete)
 {
-	if (lst == NULL && del == NULL)
+	if (list == NULL && delete == NULL)
 		return ;
-	del(lst->content);
-	free(lst);
+	delete(list->content);
+	free(list);
 }

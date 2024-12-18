@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   libndav_def.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/01 17:47:48 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/12/18 19:48:20 by ndavenne         ###   ########.fr       */
+/*   Created: 2024/12/18 21:15:15 by ndavenne          #+#    #+#             */
+/*   Updated: 2024/12/18 21:17:26 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libndav.h"
+#ifndef LIBNDAV_DEF_H
+# define LIBNDAV_DEF_H
 
-size_t	ft_lstsize(t_list *list)
-{
-	size_t	size;
+typedef unsigned long	t_ulong;
+typedef unsigned int	t_uint;
+typedef unsigned char	t_byte;
 
-	size = 0;
-	while (list != NULL)
-	{
-		list = list->next;
-		size++;
-	}
-	return (size);
-}
+#endif
