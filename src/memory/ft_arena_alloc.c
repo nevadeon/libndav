@@ -6,7 +6,7 @@
 /*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:03:28 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/12/18 21:31:24 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/02 18:36:23 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ void	*ft_arena_alloc(size_t size)
 			return (NULL);
 		used_memory = 0;
 	}
+	if (used_memory % sizeof(void *) != 0)
+		used_memory += sizeof(void *) - (used_memory % sizeof(void *));
 	used_memory += size;
 	return ((*head)->block + used_memory - size);
 }
