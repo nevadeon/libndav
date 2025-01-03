@@ -6,7 +6,7 @@
 /*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:03:28 by ndavenne          #+#    #+#             */
-/*   Updated: 2025/01/03 19:50:38 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/03 19:53:13 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,18 +80,4 @@ void	*ft_arena_alloc(size_t size)
 
 // 	pos += size;
 // 	return (block + pos - size);
-// }
-
-// int main(int argc, char const *argv[])
-// {
-// 	int i =0;
-// 	char *string;
-
-// 	while (i<30)
-// 	{
-// 		string = ft_arena_alloc(300);
-// 		i++;
-// 	}
-// 	ft_free_arena();
-// 	return 0;
 // }
