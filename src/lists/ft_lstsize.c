@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 17:47:48 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/12/18 19:48:20 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/03 19:51:46 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

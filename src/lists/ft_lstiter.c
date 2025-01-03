@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 14:29:57 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/12/18 21:42:14 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/03 19:51:44 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

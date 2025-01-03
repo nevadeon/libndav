@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libndav_char.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 21:02:58 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/12/18 21:03:06 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/03 19:52:22 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

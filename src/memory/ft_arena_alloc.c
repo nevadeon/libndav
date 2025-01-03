@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_arena_alloc.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:03:28 by ndavenne          #+#    #+#             */
-/*   Updated: 2025/01/02 18:36:23 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/03 19:50:38 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

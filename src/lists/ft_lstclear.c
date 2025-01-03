@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 12:39:33 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/12/18 21:35:46 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/03 19:51:42 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strclen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <github@noedavenne.aleaas.coms    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:09:48 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/10/27 00:45:31 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/03 19:51:15 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

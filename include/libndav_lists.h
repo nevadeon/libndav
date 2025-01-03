@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libndav_lists.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 21:04:13 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/12/18 21:51:47 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/03 19:52:18 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 16:39:45 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/12/04 14:52:55 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/03 19:51:16 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

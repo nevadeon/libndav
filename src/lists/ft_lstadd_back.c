@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 11:28:47 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/12/18 19:47:00 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/03 19:51:41 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

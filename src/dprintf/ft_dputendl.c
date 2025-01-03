@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dputendl.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <ndavenne@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:43:15 by ndavenne          #+#    #+#             */
-/*   Updated: 2024/12/07 12:15:57 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/03 19:51:53 by ndavenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
