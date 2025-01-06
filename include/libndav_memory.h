@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libndav_memory.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
+/*   By: nevadeon <github@glhf.slmail.me>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 21:05:40 by ndavenne          #+#    #+#             */
-/*   Updated: 2025/01/03 19:52:18 by ndavenne         ###   ########.fr       */
+/*   Updated: 2025/01/06 21:41:11 by nevadeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_arena_list
  * @return A pointer to the allocated memory or NULL in case of error
  */
 void	*ft_arena_alloc(size_t size);
+void	*ft_arena_calloc(size_t nmemb, size_t size);
 void	ft_free_arena(void);
 
 void	*ft_calloc(size_t nmemb, size_t size);
