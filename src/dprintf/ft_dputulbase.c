@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_dputulbase.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ndavenne <github@noedavenne.aleaas.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 19:02:52 by ndavenne          #+#    #+#             */
-/*   Updated: 2025/01/03 19:52:01 by ndavenne         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libndav.h"
 
 static size_t	_recursive(int fd, t_ulong ul, char *base, size_t base_len)
